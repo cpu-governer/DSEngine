@@ -6,6 +6,14 @@ struct Vector2
 	Vector2();
 	Vector2(float _x, float _y);
 
+	Vector2& 	operator+=(const Vector2& other);
+	Vector2& 	operator*=(const Vector2& other);
+	Vector2  	operator+ (const Vector2& other);
+	Vector2  	operator* (const Vector2& other);
+	Vector2& 	operator= (const Vector2& other);
+	bool 	 	operator==(const Vector2& other);
+
+
         float x, y;
 };
 

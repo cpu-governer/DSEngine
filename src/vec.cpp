@@ -3,6 +3,56 @@
 Vector2::Vector2() { }
 Vector2::Vector2(float _x, float _y): x(_x), y(_y) { }
 
+Vector2& Vector2::operator=(const Vector2& other)
+{
+	if(this == &other) {
+		return *this;
+	}
+	x = other.x;
+	y = other.y;
+	return *this;
+}
+
+bool Vector2::operator==(const Vector2& other)
+{
+	if(this == &other) {
+		return true;
+	}
+	if(x == other.x && y == other.y) {
+		return true;
+	}
+	return false;
+}
+
+Vector2& Vector2::operator+=(const Vector2& other)
+{
+	x += other.x;
+	y += other.y;
+	return *this;
+}
+
+Vector2& Vector2::operator*=(const Vector2& other)
+{
+	x *= other.x;
+	y *= other.y;
+	return *this;
+}
+
+Vector2 Vector2::operator+(const Vector2& other)
+{
+	Vector2 ret = *this;
+	ret += other;
+	return ret;
+}
+
+Vector2 Vector2::operator*(const Vector2& other)
+{
+	Vector2 ret = *this;
+	ret *= other;
+	return ret;
+}
+
+
 AABBCoords AABB::coords() const
 {
 	AABBCoords ret { pos.x, pos.y, pos.x + dim.x, pos.y + dim.y };
