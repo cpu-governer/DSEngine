@@ -10,10 +10,13 @@ class Player
 public:
 	Player();
 
-	void set
+	void setVelocity(Vector2 vel);
+
+	void update(uint32_t delta);
+	void render(SDL_Renderer* target);
 
 private:
-	Vector2 velocity;
+	Vector2 accel, velocity;
 	AABB boundBox;
 
 	SDL_Texture* sprite;

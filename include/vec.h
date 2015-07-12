@@ -1,6 +1,14 @@
 #ifndef VEC_H
 #define VEC_H
 
+struct Dimension
+{
+	Dimension();
+	Dimension(int _x, int _y);
+	
+	int x, y;
+};
+
 struct Vector2
 {
 	Vector2();
