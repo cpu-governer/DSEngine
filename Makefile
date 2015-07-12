@@ -8,7 +8,7 @@ CC := g++
 
 LIBS := -lSDL2 -lSDL2_image
 
-CFLAGS := -c -Wall
+CFLAGS := -c -Wall -std=c++11
 
 LFLAGS := $(LIBS)
 
