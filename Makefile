@@ -18,7 +18,8 @@ INCDIR := -Iinclude
 
 OBJDIR := obj
 
-SRCFILES_ := main.cpp
+SRCFILES_ := 	main.cpp \
+		vec.cpp \
 
 SRCFILES := $(addprefix $(SRCDIR)/,$(SRCFILES_))
 OBJFILES := $(addprefix $(OBJDIR)/,$(SRCFILES_:.cpp=.o))
